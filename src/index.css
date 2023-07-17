@@ -1,0 +1,79 @@
+* {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+body {
+  margin: 0;
+  font-family: Karla;
+  box-sizing: border-box;
+}
+
+/* header */
+nav {
+  display: flex;
+  box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.3);
+  padding: 1.4rem 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #672280, #A626D3);
+  color: white;
+}
+
+nav > .nav-left {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+nav > .nav-right > h3 {
+  font-weight: 400;
+}
+
+#trollface-favicon {
+  width: 20%;
+}
+/* header */
+
+/* pageContent */
+main {
+  margin: 5% 15%;
+}
+
+.textinput-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+  gap: 1.25rem;
+}
+
+.textinput-container > input {
+  width: 50%;
+  border: 1px solid #D5D4D8;
+  height: 40px;
+  font-size: 1.3rem;
+  padding: 10px 16px;
+}
+
+#getmeme-button, .textinput-container > input{
+  border-radius: 7px;
+}
+
+#getmeme-button {
+  padding: 10px;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(90deg, #672280, #A626D3);
+  color: white;
+  font-weight: 500;
+  font-size: 1.15rem;
+  border: none;
+}
+
+#getmeme-button:hover {
+  opacity: 0.75;
+}
+/* pageContent */
