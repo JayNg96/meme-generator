@@ -58,7 +58,9 @@ main {
   padding: 10px 16px;
 }
 
-#getmeme-button, .textinput-container > input{
+#getmeme-button, 
+.textinput-container > input,
+.meme-image-container {
   border-radius: 7px;
 }
 
@@ -75,5 +77,11 @@ main {
 
 #getmeme-button:hover {
   opacity: 0.75;
+}
+
+.meme-image-container {
+  width: 100%;
+  margin: 5% 0;  
+  border: 3px solid black;
 }
 /* pageContent */
