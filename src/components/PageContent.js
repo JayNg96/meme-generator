@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { memesData } from './../memesData'
+import { useState, useEffect } from 'react'
+
 export default function PageContent() {
 
     const [meme, setMeme] = useState({
@@ -9,10 +9,10 @@ export default function PageContent() {
     })
 
     // eslint-disable-next-line
-    const [allMemeImages, setAllMemeImages] = useState(memesData)
+    const [allMemeImages, setAllMemeImages] = useState({})
 
     function getMemeImage(){
-        let getNewImage = allMemeImages.data.memes[Math.floor(Math.random() * memesData.data.memes.length)].url
+        let getNewImage = allMemeImages[Math.floor(Math.random() * allMemeImages.length)].url
         setMeme(prevImg => ({...prevImg, randomImg:getNewImage}))
     }
     
@@ -23,6 +23,13 @@ export default function PageContent() {
         }))
     }
 
+    useEffect(()=>{
+        fetch('https://api.imgflip.com/get_memes')
+            .then(res => res.json())
+            .then(memeData => setAllMemeImages(memeData.data.memes))
+    }, [])
+
+    console.log(allMemeImages)
     return (
         <main>
             <div className="meme-input-form">
